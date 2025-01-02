@@ -8,5 +8,8 @@ apply:
 	AWS_PROFILE=${AWS_PROFILE} terraform apply \
 		-var-file=environments/dev/terraform.tfvars	
 
+destroy:
+	AWS_PROFILE=${AWS_PROFILE} terraform destroy \
+		-var-file=environments/dev/terraform.tfvars
 fmt:
 	terraform fmt
